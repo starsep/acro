@@ -45,7 +45,7 @@ getJSON('bikes.json',
       let bikes = data.bikes;
       for (let i = 0; i < bikes.length; i++) {
         let bike = bikes[i];
-        let marker = L.marker([bike.lat, bike.lng]).addTo(map);
+        let marker = L.marker([bike.latitude, bike.longitude]).addTo(map);
       }
       // showPoints(data.points);
     }
