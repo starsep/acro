@@ -1,8 +1,8 @@
 var map = new L.Map('map', {center: new L.LatLng(52.237049, 21.017532), zoom: 12});
-var roads = L.gridLayer.googleMutant({
-  type: 'roadmap' // valid values are 'roadmap', 'satellite', 'terrain' and 'hybrid'
+
+L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
 }).addTo(map);
-map.addLayer(roads);
 
 function getJSON(url, callback) {
   var xhr = new XMLHttpRequest();
